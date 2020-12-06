@@ -76,4 +76,12 @@ public class Restaurant {
         return closingTime;
     }
 
+    public double totalOrderCost(String items[]){
+
+        double total=0;
+
+        for (String x:items){ Item item=findItemByName(x); total+=item.getPrice(); }
+
+        return total;
+    }
 }
